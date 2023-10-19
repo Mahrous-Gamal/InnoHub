@@ -1,0 +1,441 @@
+body {
+  height: 3000px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'League Spartan', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.general-color {
+  color: var(--main-color)
+}
+
+.mx-width {
+  max-width: 100%
+}
+
+.w-98 {
+  width: 98%;
+}
+
+.gradient {
+  background: var(--safety-orange);
+  color: #fff;
+  font-weight: bold;
+  outline: 0;
+  border: 0;
+  transition: all .3s ease;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.gradient:hover {
+  background: linear-gradient(to left top, var(--persian-rose), var(--safety-orange));
+  ;
+}
+
+.mt-6 {
+  margin-top: 6rem;
+}
+
+.icon-so {
+  color: #fc3549;
+  margin-right: 10px;
+}
+
+/* CSS Variables */
+:root {
+
+  --safety-orange: hsl(25, 100%, 50%);
+  --lavender-gray: hsl(230, 19%, 81%);
+  --persian-rose: hsl(328, 100%, 59%);
+  --main-color: hsl(341, 100%, 49%);
+  --eerie-black: hsl(240, 6%, 10%);
+  --light-gray: hsl(0, 0%, 80%);
+  --cultured-2: hsl(210, 60%, 98%);
+  --platinum: hsl(0, 0%, 90%);
+  --gray-web: hsl(220, 5%, 49%);
+  --cultured: hsl(0, 0%, 93%);
+  --black_10: hsla(0, 0%, 0%, 0.1);
+  --black_5: hsla(0, 0%, 0%, 0.05);
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 14%, 98%);
+  --black: hsl(0, 0%, 0%);
+
+  --gradient: linear-gradient(to left top, var(--persian-rose), var(--safety-orange));
+
+  --ff-roboto: 'Roboto', sans-serif;
+  --ff-league-spartan: 'League Spartan', sans-serif;
+
+  --fs-1: 3.5rem;
+  --fs-2: 3rem;
+  --fs-3: 2.1rem;
+  --fs-4: 1.7rem;
+  --fs-5: 1.4rem;
+  --fs-6: 1.3rem;
+
+  --fw-700: 700;
+  --fw-500: 500;
+
+  --section-padding: 60px;
+
+  --shadow-1: 0 6px 24px var(--black_5);
+  --shadow-2: 0 2px 28px var(--black_10);
+
+  --radius-2: 2px;
+  --radius-5: 5px;
+  --radius-8: 8px;
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(250, 244, 244);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.scrolling-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to left top, var(--persian-rose), var(--safety-orange));
+  color: rgb(200, 192, 192);
+  border-radius: 50%;
+  z-index: 999;
+  cursor: pointer;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  transition: all .3s ease;
+  animation: move .3s infinite alternate;
+  -webkit-animation: move .3s infinite alternate;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.scrolling-up.show {
+  opacity: 1;
+}
+.navbar{
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;}
+/*nav*/
+.navbar-nav {
+
+  margin-right: 15px;
+}
+.navbar-nav a:hover {
+
+color: var(--main-color);
+}
+.main-section .text {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: var(--ff-league-spartan);
+  /* border: 2px solid red; */
+}
+@media only screen and (min-width: 300px) and (max-width: 1100px) {
+  .main-section .text {
+    font-size: 30px;
+
+  
+}
+}
+.services {
+  background-color: #f0f0f0;
+  /* border: 2px solid blue; */
+}
+
+.services .serv {
+  background: #fff;
+  padding: 40px 10px;
+  border-radius: 10px;
+  border: 1px solid #dbd3d3;
+  transition: all .3s ease;
+
+}
+
+.services .serv:hover {
+  transform: translatey(-10px);
+}
+
+.services .serv .icon {
+  padding: 24px 20px;
+  border-radius: 50%;
+  color: #fff
+}
+
+.services .serv .icon1 {
+  background-color: #13c4a1;
+}
+
+.services .serv .icon2 {
+  background-color: #6610f2;
+}
+
+.services .serv .icon3 {
+  background-color: orange;
+}
+
+.services .serv .icon4 {
+  background-color: #fc3549;
+}
+
+.services .serv .icon5 {
+  background-color: #00d280;
+}
+
+.services .serv .icon6 {
+  background-color: orangered;
+}
+
+.services .serv .ser-para {
+  color: #555;
+  line-height: 1.5;
+}
+
+/*projects*/
+.projects{
+  /* border: 2px solid green; */
+  /* padding: 0px !important ; */
+}
+.projects .project1 {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  position: relative;
+  background-color: var(--light-gray);
+  transition: all .5s ease;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+}
+.projects .project1:hover .text-project1 {
+  transform: translateY(-10px);
+}
+
+.projects .project1 .text-project1 {
+  z-index: 10;
+  position: absolute;
+  color: #000;
+  bottom: 10px;
+  padding: 24px;
+
+}
+
+.projects .project1 .text-project1 h2 {
+  margin-bottom: 0;
+}
+
+.projects .project1 img {
+  width: 100%;
+  height: 100%;
+
+}
+
+.projects .project1 .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--eerie-black);
+  opacity: .5;
+}
+
+.projects .project1 .overlay:hover {
+  opacity: .8;
+}
+
+.image-aboutus {
+  /* border: 2px solid red; */
+  height: 500px;
+}
+
+.image-aboutus img {
+  height: 100%;
+  width: 100%;
+}
+
+/* what is next */
+.whatisnext {
+  height: 300px;
+  background-image: url(../images/cta-bg.jpg);
+  background-size: cover;
+  padding-top: 60px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border: 2px solid red;
+}
+
+.whatisnext::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--gradient);
+  opacity: 0.95;
+  z-index: -1;
+
+}
+
+.btn-get {
+  border: 0;
+  outline: 0;
+  margin-top: 20px;
+  background: white;
+  padding: 11px 29px;
+  border-radius: 9px;
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.btn-get:hover {
+  background: black;
+  color: white;
+
+}
+
+.contact-us {
+  background-color: var(--white-2);
+  width: 100%;
+  border-radius: 10px;
+}
+
+.content-contact {
+  text-align: center;
+
+}
+
+.form-contact {
+  background-color: #fff !important;
+  padding: 50px;
+  border-radius: 10px;
+  /* border: 2px solid red; */
+
+}
+@media only screen and (min-width: 300px) and (max-width: 1100px) {
+  .form-contact {
+    background-color: #fff !important;
+    padding: 50px 10px;
+    border-radius: 10px;
+    /* border: 2px solid red; */
+  
+  }
+}
+.form-contact .inputs {
+  border: 0;
+  outline: 0;
+  background-color: var(--white-2);
+  color: #000;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.form-contact .area {
+  border: 0;
+  outline: 0;
+  height: 100px;
+  width: 99%;
+  margin-top: 20px;
+  background: #fbf9f9;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.form-contact .inputs:focus,
+.form-contact .area:focus {
+  border-color: #fc3549;
+}
+
+.information {
+  background: var(--white-2);
+
+  background: hsl(0deg 20% 98.04%);
+
+  padding: 42px 0px;
+}
+
+.information .box {
+  display: flex;
+  /* border: 2px solid #fc3549; */
+  align-items: center;
+  /* flex-wrap: wrap  ; */
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  width: 100%;
+  /* width: fit-content; */
+}
+
+.information .box .icon-nfo {
+  color: #fc3549;
+  background-color: aliceblue;
+}
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .coyright h5{
+font-size: 16px;
+  }
+}
